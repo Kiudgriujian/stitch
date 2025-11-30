@@ -8,12 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            /* DAHA TURUNCU TONLAR */
-            --primary-orange: #FF6B35; /* Canlı Turuncu */
-            --secondary-orange: #F48C06; /* Gün Batımı Sarısı */
-            --deep-red: #D00000; /* Derin Kırmızı */
+            --primary-orange: #FF6B35;
+            --secondary-orange: #F48C06;
+            --deep-red: #D00000;
             --text-color: #2c3e50;
-            --glass-bg: rgba(255, 250, 240, 0.9); /* Hafif krem rengi cam */
+            --glass-bg: rgba(255, 250, 240, 0.9);
             --glass-border: 1px solid rgba(255, 140, 66, 0.3);
         }
 
@@ -25,14 +24,13 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
-            /* Arkaplanı daha yoğun turuncu/kızıl yaptık */
             background: linear-gradient(135deg, #FF8C42, #FF3C00, #F7B538);
             background-size: 400% 400%;
             animation: gradientBG 15s ease infinite;
             color: var(--text-color);
             min-height: 100vh;
             overflow-x: hidden;
-            line-height: 1.8;
+            line-height: 1.6; /* Mobilde okumayı kolaylaştırmak için biraz düşürdük */
         }
 
         @keyframes gradientBG {
@@ -73,42 +71,43 @@
             z-index: 10;
         }
 
-        /* Hero Bölümü */
+        /* Header / Giriş */
         header {
             text-align: center;
-            padding: 60px 0 50px;
+            padding: 40px 10px; /* Mobilde padding azaltıldı */
             color: #fff;
             text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
         }
 
         h1 {
             font-family: 'Great Vibes', cursive;
-            font-size: 5rem;
+            font-size: 4rem; /* Mobilde taşmaması için küçültüldü */
             margin-bottom: 10px;
-            line-height: 1.2;
+            line-height: 1.1;
             animation: scaleIn 1.5s ease;
         }
 
         .subtitle {
-            font-size: 1.4rem;
+            font-size: 1.1rem;
             font-weight: 300;
-            letter-spacing: 3px;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
-        /* YENİ ÜST KISIM: AŞK ROZETİ */
+        /* Aşk Rozeti */
         .love-badge {
             display: inline-block;
             background: rgba(255, 255, 255, 0.25);
             border: 2px solid rgba(255, 255, 255, 0.6);
-            padding: 10px 25px;
+            padding: 8px 20px;
             border-radius: 50px;
             color: #fff;
             font-family: 'Cinzel', serif;
             font-weight: bold;
-            letter-spacing: 2px;
-            margin-bottom: 30px;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
             backdrop-filter: blur(5px);
             box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
             animation: floatBadge 3s ease-in-out infinite;
@@ -119,14 +118,14 @@
             50% { transform: translateY(-10px); }
         }
 
-        /* Genel Kart Stili */
+        /* Kart Stili */
         .section-card {
             background: var(--glass-bg);
             backdrop-filter: blur(12px);
-            border-radius: 30px;
-            padding: 50px;
-            margin-bottom: 60px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            border-radius: 20px; /* Mobilde daha yumuşak köşeler */
+            padding: 30px 20px; /* Mobilde iç boşluk azaltıldı */
+            margin-bottom: 40px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
             border: var(--glass-border);
             transform: translateY(50px);
             opacity: 0;
@@ -141,41 +140,42 @@
         h2 {
             font-family: 'Dancing Script', cursive;
             color: var(--primary-orange);
-            font-size: 3rem;
+            font-size: 2.2rem; /* Mobilde başlık boyutu ayarlandı */
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             position: relative;
-            padding-bottom: 15px;
+            padding-bottom: 10px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            line-height: 1.2;
         }
 
         h2::after {
             content: '♥';
             display: block;
-            font-size: 1.5rem;
-            margin-top: 10px;
+            font-size: 1.2rem;
+            margin-top: 5px;
             color: var(--secondary-orange);
         }
 
-        /* Zaman Tüneli Çizgisi */
+        /* Zaman Tüneli */
         .timeline {
             position: relative;
-            padding-left: 30px;
+            padding-left: 25px;
             border-left: 3px solid rgba(255, 107, 53, 0.5);
-            margin-left: 20px;
+            margin-left: 10px;
         }
 
         .timeline-item {
             position: relative;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .timeline-dot {
             position: absolute;
-            left: -39px;
-            top: 0;
-            width: 20px;
-            height: 20px;
+            left: -36px; /* Çizgi konumuna göre ayarlandı */
+            top: 5px;
+            width: 16px;
+            height: 16px;
             background: #fff;
             border: 4px solid var(--primary-orange);
             border-radius: 50%;
@@ -185,36 +185,37 @@
         .date-badge {
             background: linear-gradient(to right, #FF6B35, #F48C06);
             color: white;
-            padding: 8px 20px;
+            padding: 6px 15px;
             border-radius: 20px;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 0.85rem;
             display: inline-block;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 15px rgba(244, 140, 6, 0.4);
+            margin-bottom: 10px;
+            box-shadow: 0 4px 10px rgba(244, 140, 6, 0.4);
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: #d35400;
+            margin-bottom: 8px;
         }
 
         /* Star Map */
         .star-map-wrapper {
             position: relative;
-            padding: 10px;
+            padding: 8px;
             background: #fff;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
             transform: rotate(-2deg);
-            transition: transform 0.3s;
-            margin: 30px 0;
+            margin: 25px 0;
             border: 1px solid #ffe0b2;
         }
         
-        .star-map-wrapper:hover {
-            transform: rotate(0deg) scale(1.02);
-            z-index: 5;
-        }
-
         .star-map-img {
             width: 100%;
-            border-radius: 10px;
+            height: auto;
+            border-radius: 8px;
             display: block;
         }
 
@@ -222,73 +223,68 @@
         .counter-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            margin-top: 30px;
+            gap: 10px;
+            margin-top: 25px;
         }
 
         .counter-box {
             background: linear-gradient(135deg, #fff, #ffe0b2);
-            padding: 15px;
-            border-radius: 15px;
+            padding: 10px 5px;
+            border-radius: 10px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
             border: 1px solid #FFCC80;
         }
 
         .counter-number {
-            font-size: 2.5rem;
+            font-size: 1.8rem; /* Mobilde rakamlar taşmasın */
             font-weight: 800;
             color: var(--primary-orange);
             font-family: 'Montserrat', sans-serif;
             display: block;
+            line-height: 1;
         }
 
         .counter-label {
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             color: #d35400;
+            margin-top: 5px;
+            display: block;
         }
 
-        /* Neden Sen? Bölümü */
+        /* Neden Sen? */
         .love-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: 1fr; /* Mobilde tek sütun */
+            gap: 15px;
         }
 
         .love-note {
             background: rgba(255, 236, 210, 0.6);
-            padding: 20px;
+            padding: 15px;
             border-radius: 15px;
             text-align: center;
-            transition: all 0.3s;
-            cursor: pointer;
             border: 1px solid rgba(255, 167, 38, 0.2);
         }
 
-        .love-note:hover {
-            background: #fff;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(255, 107, 53, 0.2);
-        }
-
         .love-icon {
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: var(--primary-orange);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
-        /* Mektup Bölümü */
+        /* Mektup */
         .letter-content {
             font-family: 'Times New Roman', serif;
-            font-size: 1.3rem;
-            line-height: 1.9;
+            font-size: 1.1rem;
+            line-height: 1.6;
             color: #444;
-            background: #fff8e1; /* Daha sarımtırak kağıt rengi */
-            padding: 40px;
+            background: #fff8e1;
+            padding: 25px;
             border-radius: 5px;
-            box-shadow: inset 0 0 30px rgba(0,0,0,0.05);
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
             position: relative;
             border: 1px solid #ffe0b2;
         }
@@ -296,32 +292,31 @@
         .letter-content::before {
             content: '';
             position: absolute;
-            top: 0; left: 20px; bottom: 0;
+            top: 0; left: 10px; bottom: 0;
             width: 2px;
             background: rgba(255, 107, 53, 0.1);
         }
 
         /* 01:40 Vurgusu */
         .rebirth-box {
-            /* Daha yoğun turuncu gradyan */
             background: linear-gradient(to right, #FFB75E 0%, #ED8F03 100%);
-            border: 4px solid #fff;
-            border-radius: 30px;
-            padding: 40px;
+            border: 3px solid #fff;
+            border-radius: 20px;
+            padding: 25px;
             text-align: center;
             position: relative;
             overflow: hidden;
             color: #fff;
-            box-shadow: 0 10px 30px rgba(237, 143, 3, 0.4);
+            box-shadow: 0 8px 20px rgba(237, 143, 3, 0.4);
         }
 
         .rebirth-time {
-            font-size: 5rem;
+            font-size: 3.5rem; /* Mobilde daha küçük */
             font-weight: 800;
             font-family: 'Montserrat', sans-serif;
             color: #fff;
-            text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
-            margin: 20px 0;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+            margin: 15px 0;
         }
 
         /* Galeri */
@@ -329,23 +324,26 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 25px;
-            padding: 20px;
+            gap: 20px;
+            padding: 10px 0;
         }
 
         .photo-frame {
             background: #fff;
-            padding: 15px 15px 45px 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            width: 220px;
-            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            padding: 10px 10px 35px 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            width: 100%; /* Mobilde tam genişlik */
+            max-width: 300px; /* Çok da büyümesin */
+            transition: all 0.5s;
             position: relative;
             cursor: pointer;
+            margin: 0 auto;
         }
 
         .photo-frame img {
             width: 100%;
-            height: 220px;
+            height: auto; /* Oranı korusun */
+            aspect-ratio: 1/1; /* Kareye yakın dursun */
             object-fit: cover;
             filter: saturate(0.9) contrast(1.1);
         }
@@ -354,37 +352,27 @@
             content: 'Furkan & Aslınur';
             font-family: 'Dancing Script', cursive;
             position: absolute;
-            bottom: 10px;
+            bottom: 8px;
             left: 0;
             width: 100%;
             text-align: center;
             color: #d35400;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
-        .photo-frame:hover {
-            transform: scale(1.1) rotate(0deg) !important;
-            z-index: 100;
-            box-shadow: 0 30px 50px rgba(255, 107, 53, 0.3);
-        }
-
-        .photo-frame:hover img {
-            filter: saturate(1.3);
-        }
-
-        /* Rastgele Açı */
-        .photo-frame:nth-child(odd) { transform: rotate(3deg); }
-        .photo-frame:nth-child(even) { transform: rotate(-3deg); margin-top: 30px; }
+        /* Rastgele Açıları Mobilde Azaltalım ki Düzgün Dursun */
+        .photo-frame:nth-child(odd) { transform: rotate(1deg); }
+        .photo-frame:nth-child(even) { transform: rotate(-1deg); margin-top: 10px; }
 
         /* Söz Kutusu */
         .promise-box {
             text-align: center;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-style: italic;
             border-top: 2px solid rgba(255,255,255,0.5);
             border-bottom: 2px solid rgba(255,255,255,0.5);
-            padding: 40px 0;
-            margin-top: 50px;
+            padding: 30px 10px;
+            margin-top: 30px;
         }
 
         /* Animasyon Keyframes */
@@ -393,18 +381,65 @@
             to { transform: scale(1); opacity: 1; }
         }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
+        /* MOBİL İÇİN ÖZEL DÜZENLEMELER (MEDIA QUERIES) */
         @media (max-width: 768px) {
-            h1 { font-size: 3rem; }
-            .counter-grid { grid-template-columns: repeat(2, 1fr); }
-            .timeline { border-left: none; padding-left: 0; margin-left: 0; }
-            .timeline-dot { display: none; }
-            .photo-frame { width: 45%; }
+            h1 { 
+                font-size: 3rem; /* Başlık daha küçük */
+            }
+            
+            .container {
+                padding: 15px;
+            }
+
+            .section-card {
+                padding: 25px 15px; /* Kart içi boşluklar azaldı */
+            }
+
+            /* Sayaç mobilde 2x2 olsun */
+            .counter-grid {
+                grid-template-columns: repeat(2, 1fr); 
+            }
+
+            .counter-number {
+                font-size: 2rem;
+            }
+
+            /* Zaman tüneli çizgisi mobilde biraz daha solda */
+            .timeline {
+                padding-left: 20px;
+                border-left-width: 2px;
+            }
+            
+            .timeline-dot {
+                left: -29px;
+                width: 12px;
+                height: 12px;
+                border-width: 3px;
+                top: 6px;
+            }
+
+            /* Galeri fotoğrafları mobilde alt alta */
+            .photo-frame {
+                width: 90%; 
+                margin-bottom: 20px;
+            }
+            
+            .photo-frame:nth-child(even) {
+                margin-top: 0; /* Masaüstündeki kaydırmayı sıfırla */
+            }
+
+            .love-grid {
+                grid-template-columns: 1fr; /* Neden Sen kısmı tek sütun */
+            }
+
+            .rebirth-time {
+                font-size: 3rem;
+            }
+
+            .letter-content {
+                padding: 20px 15px;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -417,14 +452,13 @@
         
         <!-- Giriş -->
         <header>
-            <!-- Müzik yerine yeni Aşk Rozeti -->
             <div class="love-badge">
                 <i class="fas fa-infinity"></i> 2024'ten Sonsuza...
             </div>
 
             <h1>Furkan & Aslınur</h1>
             <p class="subtitle">"Tesadüf diye bir şey yoktur, mucize vardır."</p>
-            <p style="max-width: 600px; margin: 0 auto; font-style: italic;">
+            <p style="font-size: 0.95rem; line-height: 1.5; font-style: italic; opacity: 0.9;">
                 Bu sayfa sadece kodlardan ve yazılardan ibaret değil Aslınur. Bu sayfa, kalbimin dijital bir yansıması. 
                 Aşağı doğru kaydırdığın her pikselde sana olan sevgimi ilmek ilmek işledim.
             </p>
@@ -439,7 +473,7 @@
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="date-badge">23 Aralık • Gece 00:24</span>
-                    <h3 style="font-size: 1.8rem; margin-bottom: 10px; color: #d35400;">İlk Kıvılcım</h3>
+                    <h3>İlk Kıvılcım</h3>
                     <p>
                         Sıradan bir gece olabilirdi, herkes uyurken biz seninle kelimelerin dünyasında kaybolduk. 
                         Saat 00:24'tü. Sanki yıllardır tanışıyormuşuz gibi, ruhlarımız birbirine "Merhaba" dedi. 
@@ -451,19 +485,19 @@
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="date-badge">30 Aralık 2024 • 15:43</span>
-                    <h3 style="font-size: 1.8rem; margin-bottom: 10px; color: #d35400;">Dünyaların Birleşimi</h3>
+                    <h3>Dünyaların Birleşimi</h3>
                     <p>
                         1.5 hafta boyunca Instagram'ın soğuk ekranı üzerinden kalplerimizi ısıttık. Ama o gün... 
                         O gün başkaydı. İlk kez kanlı canlı karşımdaydın. 
                     </p>
-                    <p>
+                    <p style="margin-top: 10px;">
                         <strong>Saat tam 15:43.</strong> Elini sıktığım o an, aslında kalbimi avuçlarına bıraktığım andı. 
                         Dünya durdu, insanlar silikleşti, sadece sen ve ben kaldık.
                     </p>
 
                     <!-- Star Map -->
                     <div class="star-map-wrapper">
-                        <div style="position: absolute; top: 10px; left: 10px; background: rgba(0,0,0,0.7); color: #fff; padding: 5px 10px; border-radius: 5px; font-size: 0.8rem;">
+                        <div style="position: absolute; top: 10px; left: 10px; background: rgba(0,0,0,0.7); color: #fff; padding: 5px 10px; border-radius: 5px; font-size: 0.7rem;">
                             <i class="fas fa-star"></i> O An Gökyüzü
                         </div>
                         <img src="https://i.ibb.co/YFk5CSnP/Screenshot-1.png" alt="Star Map" class="star-map-img">
@@ -471,7 +505,7 @@
 
                     <!-- Geri Sayım -->
                     <div style="text-align: center; margin-top: 30px;">
-                        <p style="font-weight: bold; color: var(--primary-orange); margin-bottom: 10px;">O Büyülü Dokunuştan Beri Geçen Süre:</p>
+                        <p style="font-weight: bold; color: var(--primary-orange); margin-bottom: 10px; font-size: 0.95rem;">O Büyülü Dokunuştan Beri Geçen Süre:</p>
                         <div class="counter-grid" id="countdown">
                             <!-- JS dolduracak -->
                         </div>
@@ -485,14 +519,14 @@
         <div class="section-card">
             <h2>Milat: 1 Aralık Gecesi</h2>
             <div class="rebirth-box">
-                <i class="fas fa-infinity" style="font-size: 3rem; color: #fff; opacity: 0.9;"></i>
+                <i class="fas fa-infinity" style="font-size: 2.5rem; color: #fff; opacity: 0.9;"></i>
                 <div class="rebirth-time">01:40</div>
-                <p style="font-size: 1.2rem; margin-bottom: 20px;">
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
                     1 Aralık dedik belki şaka yollu ama kaderin planı başkaydı. 
                     O gece bir anda "BİZ" olduk.
                 </p>
                 <hr style="border-color: rgba(255,255,255,0.4); margin: 20px 0;">
-                <p style="font-style: italic; font-size: 1.1rem; line-height: 1.8;">
+                <p style="font-style: italic; font-size: 1rem; line-height: 1.6;">
                     "Furkan, neden bu kadar seviyorsun?" diye sorarsan cevabım bu saatte gizli.<br>
                     Saat 01:40 benim doğum saatim.<br>
                     Ve tam aynı saatte seninle sevgili olmamız tesadüf olamaz.<br>
@@ -566,11 +600,11 @@
         <!-- BÖLÜM 6: GELECEK ve SÖZ -->
         <div class="section-card">
             <h2>Geleceğe Not</h2>
-            <ul style="list-style: none; text-align: center; font-size: 1.1rem;">
-                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: green;"></i> Birlikte daha nice şehirler gezilecek.</li>
-                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: green;"></i> Yağmur altında daha çok yürünecek.</li>
-                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: green;"></i> En güzel kahkahalar birlikte atılacak.</li>
-                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: green;"></i> Ve ellerimiz... Hiç ayrılmayacak.</li>
+            <ul style="list-style: none; text-align: left; font-size: 1rem; padding-left: 10px;">
+                <li style="margin-bottom: 12px;"><i class="fas fa-check" style="color: green; margin-right: 8px;"></i> Birlikte daha nice şehirler gezilecek.</li>
+                <li style="margin-bottom: 12px;"><i class="fas fa-check" style="color: green; margin-right: 8px;"></i> Yağmur altında daha çok yürünecek.</li>
+                <li style="margin-bottom: 12px;"><i class="fas fa-check" style="color: green; margin-right: 8px;"></i> En güzel kahkahalar birlikte atılacak.</li>
+                <li style="margin-bottom: 12px;"><i class="fas fa-check" style="color: green; margin-right: 8px;"></i> Ve ellerimiz... Hiç ayrılmayacak.</li>
             </ul>
 
             <div class="promise-box">
@@ -580,7 +614,7 @@
 
         <footer style="text-align: center; padding: 40px; color: #fff; opacity: 0.9;">
             <i class="fas fa-heart" style="color: #c0392b; animation: pulse 1s infinite;"></i>
-            <p style="margin-top: 10px;">Furkan ❤️ Aslınur</p>
+            <p style="margin-top: 10px; font-weight: bold;">Furkan ❤️ Aslınur</p>
             <p style="font-size: 0.8rem; margin-top: 5px;">2024 - Sonsuzluk</p>
         </footer>
 
